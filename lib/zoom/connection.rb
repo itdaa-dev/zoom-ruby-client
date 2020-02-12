@@ -6,7 +6,6 @@ module Zoom
     def initialize
       @api_key = Zoom.api_key
       @api_secret = Zoom.api_secret
-      @jwt_token = Zoom::JWTAuth.generate_token
       @api_base_uri = Configuration::DEFAULT_API_BASE_URI
       @headers = { user_agent: Configuration::DEFAULT_USER_AGENT }
       @connection = Faraday.new(url: @api_base_uri, headers: @headers) do |faraday|
@@ -71,8 +70,10 @@ module Zoom
       end
 
       def auth_header
+        jwt_token = Zoom::JWTAuth.generate_token
+
         {
-          "authorization" => "Bearer #{@jwt_token}",
+          "authorization" => "Bearer #{jwt_token}",
           # "type" => "application/json",
           # "Content-Type" => "application/json"
         }
