@@ -4,11 +4,14 @@ require "test_helper"
 
 class MeetingTest < Minitest::Spec
   it "list meetings" do
-    response = Zoom::Api::Meeting.list_meetings(user_id: "api_only@itdaa.net")
-    assert_equal 5, response.total_records
+    VCR.use_cassette("meeting") do
+      response = Zoom::Api::Meeting.list_meetings(user_id: "develop+test@itdaa.net")
+      assert_equal 3, response.total_records
+    end
   end
 
   it "create meeting" do
+    skip
     params = {
       "topic": "itdaa video chat",
       "type": 2,
@@ -27,11 +30,12 @@ class MeetingTest < Minitest::Spec
       }
     }
 
-    response = Zoom::Api::Meeting.create_meeting(user_id: "api_only@itdaa.net", params: params)
+    response = Zoom::Api::Meeting.create_meeting(user_id: "develop+test@itdaa.net", params: params)
     assert_equal params[:topic], response.topic
   end
 
   it "get meeting" do
+    skip
     params = {
       "topic": "itdaa video chat",
     }

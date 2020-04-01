@@ -3,12 +3,41 @@
 require "test_helper"
 
 class Zoom::Api::UserTest < Minitest::Spec
+  # before do
+  #   VCR.insert_cassette "user"
+  # end
+
+  # after do
+  #   VCR.eject_cassette
+  # end
+
   it "list users" do
-    response = Zoom::Api::User.list_users
-    assert_equal 6, response.total_records
+    VCR.use_cassette("user") do
+      response = Zoom::Api::User.list_users
+      assert_equal 1, response.total_records
+    end
+  end
+
+  it "get user" do
+    # "IDQTPFxpQXySoG4LQam7QQ"
+    skip
+    response = Zoom::Api::User.get_user(user_id: "develop+test@itdaa.net")
+    assert_equal "test", response.first_name
+  end
+
+  it "update user" do
+    skip
+    params = {
+      "type": "1"
+    }
+
+    # "IDQTPFxpQXySoG4LQam7QQ"
+    response = Zoom::Api::User.update_user(user_id: "api_only+4@itdaa.net", params: params)
+    assert_equal "API", response.first_name
   end
 
   it "create user" do
+    skip
     params = {
       "action": "custCreate",
       "user_info": {
@@ -24,23 +53,8 @@ class Zoom::Api::UserTest < Minitest::Spec
     assert_equal "API", response.first_name
   end
 
-  it "get user" do
-    # "IDQTPFxpQXySoG4LQam7QQ"
-    response = Zoom::Api::User.get_user(user_id: "api_only+4@itdaa.net")
-    assert_equal "API", response.first_name
-  end
-
-  it "update user" do
-    params = {
-      "type": "1"
-    }
-
-    # "IDQTPFxpQXySoG4LQam7QQ"
-    response = Zoom::Api::User.update_user(user_id: "api_only+4@itdaa.net", params: params)
-    assert_equal "API", response.first_name
-  end
-
   it "delete user" do
+    skip
     params = {
       "action": "delete"
     }

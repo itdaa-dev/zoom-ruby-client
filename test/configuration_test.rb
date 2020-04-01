@@ -16,8 +16,8 @@ class ConfigurationTest < Minitest::Spec
   end
 
   it "must configure the gem with your api_key and api_secret" do
-    assert_equal "iB_y5bWPSJ6Pg_x_FYzb2A", Zoom.api_key
-    assert_equal "QQbbUzHo8JW4xJczRQhPBSNUmwaBML0jBOhU", Zoom.api_secret
+    assert_equal "JFcTaawQQ2WaFFT0OVX3GQ", Zoom.api_key
+    assert_equal "a9ZduoNHEPPMPHafUEcs4imGtpeivqj48je5", Zoom.api_secret
     assert_equal 10, Zoom.timeout
     refute Zoom.debug
   end

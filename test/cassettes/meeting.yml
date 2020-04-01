@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.zoom.us/v2/users/develop+test@itdaa.net/meetings?page=30&page_number=1&type=scheduled&user_id=develop%2Btest%40itdaa.net
+    body:
+      encoding: UTF-8
+      string: page=30&page_number=1&type=scheduled&user_id=develop%2Btest%40itdaa.net
+    headers:
+      User-Agent:
+      - Zoom Ruby Client Gem 0.1.0
+      authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKRmNUYWF3UVEyV2FGRlQwT1ZYM0dRIiwiZXhwIjoxNTgxOTY5OTE3fQ.DKzHAZi51zC7A8MvkgdcZnVaM-yCJccg8fNYcW6qYaA
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Mon, 17 Feb 2020 16:05:18 GMT
+      content-type:
+      - application/json;charset=UTF-8
+      content-length:
+      - '1092'
+      connection:
+      - close
+      server:
+      - ZOOM
+      x-zm-trackingid:
+      - WEB_89656fec3cc20a1cc302659609ed1c40
+      x-content-type-options:
+      - nosniff
+      cache-control:
+      - no-cache, no-store, must-revalidate, no-transform
+      pragma:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      set-cookie:
+      - cred=0DB335DB9174222F5CFD96299EE70CC8; Path=/; Secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000
+      x-xss-protection:
+      - 1; mode=block
+      referrer-policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '{"page_count":1,"page_number":1,"page_size":30,"total_records":3,"meetings":[{"uuid":"gX9hZIJ0TnuO1e3BdJX7JA==","id":274145417,"host_id":"lmblGIz9S9WpaJNnEwIh7g","topic":"itdaa
+        video chat","type":2,"start_time":"2020-02-17T15:44:07Z","duration":40,"timezone":"Asia/Seoul","agenda":"online
+        mentoring","created_at":"2020-02-17T15:44:10Z","join_url":"https://zoom.us/j/274145417?pwd=MHZBOVlZTWp1UGh2b3haNktGck5tUT09"},{"uuid":"gDd8SlbYR9qbxXoAMq7QRA==","id":602158471,"host_id":"lmblGIz9S9WpaJNnEwIh7g","topic":"itdaa
+        video chat","type":2,"start_time":"2020-02-17T15:44:28Z","duration":40,"timezone":"Asia/Seoul","agenda":"online
+        mentoring","created_at":"2020-02-17T15:44:27Z","join_url":"https://zoom.us/j/602158471?pwd=ckxYSXpSbkNXSE9qV3lHSnNQRnJTZz09"},{"uuid":"T2C4j7K7SJaItztX1QB3pQ==","id":114856225,"host_id":"lmblGIz9S9WpaJNnEwIh7g","topic":"itdaa
+        video chat","type":2,"start_time":"2020-02-17T15:44:37Z","duration":40,"timezone":"Asia/Seoul","agenda":"online
+        mentoring","created_at":"2020-02-17T15:44:37Z","join_url":"https://zoom.us/j/114856225?pwd=ZCttaWI1eUJzbHltTjZRbDBjRVR1UT09"}]}'
+    http_version: null
+  recorded_at: Mon, 17 Feb 2020 16:05:19 GMT
+recorded_with: VCR 5.1.0
