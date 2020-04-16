@@ -16,6 +16,7 @@ PreCommit:
     enabled: true
   RuboCop:
     enabled: true
+    command: ["bundle", "exec", "rubocop"] # Invoke within Bundler context
   TrailingWhitespace:
     enabled: true
 

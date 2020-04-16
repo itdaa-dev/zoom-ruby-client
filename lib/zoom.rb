@@ -14,6 +14,7 @@ require "zoom/objectified_hash"
 
 require "zoom/api/user"
 require "zoom/api/meeting"
+require "zoom/api/webinar"
 
 module Zoom
   extend Configuration

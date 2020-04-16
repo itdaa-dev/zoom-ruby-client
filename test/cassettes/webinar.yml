@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.zoom.us/v2/users/develop+test@itdaa.net/webinars?page=30&page_number=1&type=scheduled&user_id=develop%2Btest%40itdaa.net
+    body:
+      encoding: UTF-8
+      string: page=30&page_number=1&type=scheduled&user_id=develop%2Btest%40itdaa.net
+    headers:
+      User-Agent:
+      - Zoom Ruby Client Gem 0.1.0
+      authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKRmNUYWF3UVEyV2FGRlQwT1ZYM0dRIiwiZXhwIjoxNTg2ODY5ODYwfQ.HONkUn9r6m0vtP1pxhLSmda2UiiDFPYJLwCGBH2Bje0
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 400
+      message: ''
+    headers:
+      date:
+      - Tue, 14 Apr 2020 09:11:01 GMT
+      content-type:
+      - application/json;charset=UTF-8
+      content-length:
+      - '145'
+      connection:
+      - close
+      server:
+      - ZOOM
+      x-zm-trackingid:
+      - WEB_918239b7d138ccdb59ef6cf8bef12c7c
+      x-content-type-options:
+      - nosniff
+      cache-control:
+      - no-cache, no-store, must-revalidate, no-transform
+      pragma:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      set-cookie:
+      - zm_aid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/;
+        Secure; HttpOnly, zm_haid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10
+        GMT; Path=/; Secure; HttpOnly, cred=B010DBF9697F0BE304F3D0EB3C2811C0; Path=/;
+        Secure; HttpOnly, _zm_ctaid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970
+        00:00:10 GMT; Path=/; Secure; HttpOnly, _zm_chtaid=""; Domain=.zoom.us; Expires=Thu,
+        01-Jan-1970 00:00:10 GMT; Path=/; Secure; HttpOnly, _zm_ctaid=""; Domain=.zoom.us;
+        Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; Secure; HttpOnly, _zm_chtaid="";
+        Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/; Secure; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"code":200,"message":"Cannot use webinar API, You need to subscribe
+        webinar plan and then enable webinar for this user: lmblGIz9S9WpaJNnEwIh7g"}'
+    http_version: null
+  recorded_at: Tue, 14 Apr 2020 09:11:01 GMT
+recorded_with: VCR 5.1.0
