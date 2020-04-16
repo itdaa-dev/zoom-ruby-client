@@ -24,10 +24,10 @@ module Zoom # :nodoc:
           parse(JSON.parse(connection.get("users/#{user_id}").body))
         end
 
-        # Update information on a user’s Zoom.
+        # Update information on a user’s Zoom profile.
         # The user ID or email address of the user.
         def update_user(user_id:, params:)
-          parse(JSON.parse(connection.patch("users/#{user_id}", params.to_json).body))
+          connection.patch("users/#{user_id}", params.to_json)
         end
 
         # Deleting a user permanently removes them and their data from Zoom.

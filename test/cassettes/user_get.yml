@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.zoom.us/v2/users/develop+test@itdaa.net
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Zoom Ruby Client Gem 0.3.0
+      authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKRmNUYWF3UVEyV2FGRlQwT1ZYM0dRIiwiZXhwIjoxNTg3MDQ3OTQ4fQ.LjBQZFYdO0S2lIkNBCXS4lbSbdQeqD7A_vbYJi8C-nQ
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Thu, 16 Apr 2020 10:39:09 GMT
+      content-type:
+      - application/json;charset=UTF-8
+      content-length:
+      - '551'
+      connection:
+      - close
+      server:
+      - ZOOM
+      x-zm-trackingid:
+      - WEB_6645f96b5ff2854c0709626fb3ca40cb
+      x-content-type-options:
+      - nosniff
+      cache-control:
+      - no-cache, no-store, must-revalidate, no-transform
+      pragma:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      set-cookie:
+      - zm_aid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/;
+        Secure; HttpOnly, zm_haid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10
+        GMT; Path=/; Secure; HttpOnly, cred=57F276A05257EF924C92F56327AEFCC0; Path=/;
+        Secure; HttpOnly, _zm_ctaid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970
+        00:00:10 GMT; Path=/; Secure; HttpOnly, _zm_chtaid=""; Domain=.zoom.us; Expires=Thu,
+        01-Jan-1970 00:00:10 GMT; Path=/; Secure; HttpOnly
+      content-disposition:
+      - inline;filename=f.txt
+      strict-transport-security:
+      - max-age=31536000
+      x-xss-protection:
+      - 1; mode=block
+      referrer-policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '{"id":"lmblGIz9S9WpaJNnEwIh7g","first_name":"api","last_name":"test","email":"develop+test@itdaa.net","type":1,"role_name":"Owner","pmi":3186349069,"use_pmi":false,"personal_meeting_url":"https://zoom.us/j/3186349069","timezone":"Asia/Seoul","verified":1,"dept":"","created_at":"2020-02-17T15:06:29Z","last_login_time":"2020-04-14T08:24:24Z","host_key":"482146","jid":"lmblgiz9s9wpajnnewih7g@xmpp.zoom.us","group_ids":[],"im_group_ids":[],"account_id":"_qAH0nHKRM60DaAzQ-9OHg","language":"ko-KO","phone_country":"","phone_number":"","status":"active"}'
+    http_version: null
+  recorded_at: Thu, 16 Apr 2020 10:39:09 GMT
+recorded_with: VCR 5.1.0

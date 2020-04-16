@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.zoom.us/v2/users?page=30&page_number=1&status=active
+    body:
+      encoding: UTF-8
+      string: page=30&page_number=1&status=active
+    headers:
+      User-Agent:
+      - Zoom Ruby Client Gem 0.3.0
+      authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKRmNUYWF3UVEyV2FGRlQwT1ZYM0dRIiwiZXhwIjoxNTg3MDQ3OTQ5fQ.gViBwZ-45cu6-D3ZM42YxaAnxXX4nFLwhiX31x3FOzM
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Thu, 16 Apr 2020 10:39:10 GMT
+      content-type:
+      - application/json;charset=UTF-8
+      content-length:
+      - '373'
+      connection:
+      - close
+      server:
+      - ZOOM
+      x-zm-trackingid:
+      - WEB_2245a96ba9f2ad0ace9e47f3924ec92b
+      x-content-type-options:
+      - nosniff
+      cache-control:
+      - no-cache, no-store, must-revalidate, no-transform
+      pragma:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      set-cookie:
+      - zm_aid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/;
+        Secure; HttpOnly, zm_haid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10
+        GMT; Path=/; Secure; HttpOnly, cred=59BC2DAF0DBFC4E699D4ACC1DA6C5906; Path=/;
+        Secure; HttpOnly, _zm_ctaid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970
+        00:00:10 GMT; Path=/; Secure; HttpOnly, _zm_chtaid=""; Domain=.zoom.us; Expires=Thu,
+        01-Jan-1970 00:00:10 GMT; Path=/; Secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000
+      x-xss-protection:
+      - 1; mode=block
+      referrer-policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '{"page_count":1,"page_number":1,"page_size":30,"total_records":1,"users":[{"id":"lmblGIz9S9WpaJNnEwIh7g","first_name":"api","last_name":"test","email":"develop+test@itdaa.net","type":1,"pmi":3186349069,"timezone":"Asia/Seoul","verified":1,"created_at":"2020-02-17T15:06:29Z","last_login_time":"2020-04-14T08:24:24Z","language":"ko-KO","phone_number":"","status":"active"}]}'
+    http_version: null
+  recorded_at: Thu, 16 Apr 2020 10:39:11 GMT
+recorded_with: VCR 5.1.0
