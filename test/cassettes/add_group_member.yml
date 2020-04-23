@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.zoom.us/v2/groups/eW5tZnbETTa7DGX7bjRB_g/members
+    body:
+      encoding: UTF-8
+      string: '{"members":[{"email":"api_only+4@itdaa.net"}]}'
+    headers:
+      User-Agent:
+      - Zoom Ruby Client Gem 0.3.0
+      authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKRmNUYWF3UVEyV2FGRlQwT1ZYM0dRIiwiZXhwIjoxNTg3NjQ0NzQ3fQ.73dvTbuaYHM76OnEgm9uhAnheKDtUrBJ45NV7jKWcR0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: ''
+    headers:
+      date:
+      - Thu, 23 Apr 2020 08:25:48 GMT
+      content-type:
+      - application/json;charset=UTF-8
+      content-length:
+      - '44'
+      connection:
+      - close
+      server:
+      - ZOOM
+      x-zm-trackingid:
+      - WEB_15840847c9b2d77ea410b9bb21e040d5
+      x-content-type-options:
+      - nosniff
+      cache-control:
+      - no-cache, no-store, must-revalidate, no-transform
+      pragma:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      set-cookie:
+      - zm_aid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/;
+        Secure; HttpOnly, zm_haid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10
+        GMT; Path=/; Secure; HttpOnly, cred=94112E2034987A774DECA5BB6841AC61; Path=/;
+        Secure; HttpOnly, _zm_ctaid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970
+        00:00:10 GMT; Path=/; Secure; HttpOnly, _zm_chtaid=""; Domain=.zoom.us; Expires=Thu,
+        01-Jan-1970 00:00:10 GMT; Path=/; Secure; HttpOnly
+      strict-transport-security:
+      - max-age=31536000
+      x-xss-protection:
+      - 1; mode=block
+      referrer-policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '{"ids":"","added_at":"2020-04-23T08:25:48Z"}'
+    http_version: null
+  recorded_at: Thu, 23 Apr 2020 08:25:48 GMT
+recorded_with: VCR 5.1.0
