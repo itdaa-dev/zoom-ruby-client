@@ -6,11 +6,9 @@ module Zoom
     # Creates a new ObjectifiedHash object.
     def initialize(hash)
       @hash = hash
-      @data = hash.inject({}) do |data, (key, value)|
-        value = ObjectifiedHash.new(value) if value.is_a?(Hash)
-        value = value.collect { |e| ObjectifiedHash.new(e) } if value.is_a?(Array)
+      @data = hash.each_with_object({}) do | (key, value), data |
+        value = ObjectifiedHash.new(value) if value.is_a? Hash
         data[key.to_s] = value
-        data
       end
     end
 
@@ -18,7 +16,7 @@ module Zoom
     def to_hash
       @hash
     end
-    alias_method :to_h, :to_hash
+    alias to_h to_hash
 
     # @return [String] Formatted string with the class name, object id and original hash.
     def inspect
@@ -27,7 +25,7 @@ module Zoom
 
     # Delegate to ObjectifiedHash.
     def method_missing(key)
-      @data.key?(key.to_s) ? @data[key.to_s] : nil
+      @data.key?(key.to_s) ? @data[key.to_s] : super
     end
 
     def respond_to_missing?(method_name, include_private = false)

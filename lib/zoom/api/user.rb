@@ -37,6 +37,16 @@ module Zoom # :nodoc:
         def delete_user(user_id:, params:)
           connection.delete("users/#{user_id}", params).body
         end
+
+        # Retrieve a user’s settings.
+        def get_user_settings(user_id:)
+          parse(JSON.parse(connection.get("users/#{user_id}/settings").body))
+        end
+
+        # Update a user’s settings.
+        def update_user_settings(user_id:, params:)
+          connection.patch("users/#{user_id}/settings", params.to_json)
+        end
       end
     end
   end

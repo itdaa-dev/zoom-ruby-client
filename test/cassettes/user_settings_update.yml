@@ -1,35 +1,31 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://api.zoom.us/v2/users?page=30&page_number=1&status=active
+    method: patch
+    uri: https://api.zoom.us/v2/users/develop+test@itdaa.net/settings
     body:
       encoding: UTF-8
-      string: page=30&page_number=1&status=active
+      string: '{"feature":{"webinar":true}}'
     headers:
       User-Agent:
       - Zoom Ruby Client Gem 0.4.0
       authorization:
-      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKRmNUYWF3UVEyV2FGRlQwT1ZYM0dRIiwiZXhwIjoxNTg3MDQ3OTQ5fQ.gViBwZ-45cu6-D3ZM42YxaAnxXX4nFLwhiX31x3FOzM
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKRmNUYWF3UVEyV2FGRlQwT1ZYM0dRIiwiZXhwIjoxNTkxMTA4NTc0fQ.HCjUbULeZAbqfgL0LECXeE9IjbNMRNK8ytU--M8s-1I
       Content-Type:
-      - application/x-www-form-urlencoded
+      - application/json
   response:
     status:
-      code: 200
+      code: 204
       message: ''
     headers:
       date:
-      - Thu, 16 Apr 2020 10:39:10 GMT
-      content-type:
-      - application/json;charset=UTF-8
-      content-length:
-      - '373'
+      - Tue, 02 Jun 2020 10:36:15 GMT
       connection:
       - close
       server:
       - ZOOM
       x-zm-trackingid:
-      - WEB_2245a96ba9f2ad0ace9e47f3924ec92b
+      - WEB_f8c59b79b889a43f7821596130608d8b
       x-content-type-options:
       - nosniff
       cache-control:
@@ -41,10 +37,12 @@ http_interactions:
       set-cookie:
       - zm_aid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/;
         Secure; HttpOnly, zm_haid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10
-        GMT; Path=/; Secure; HttpOnly, cred=59BC2DAF0DBFC4E699D4ACC1DA6C5906; Path=/;
+        GMT; Path=/; Secure; HttpOnly, cred=5DD1849114B86225D5130DCB26CE2465; Path=/;
         Secure; HttpOnly, _zm_ctaid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970
         00:00:10 GMT; Path=/; Secure; HttpOnly, _zm_chtaid=""; Domain=.zoom.us; Expires=Thu,
         01-Jan-1970 00:00:10 GMT; Path=/; Secure; HttpOnly
+      x-ratelimit-category:
+      - Medium
       strict-transport-security:
       - max-age=31536000
       x-xss-protection:
@@ -53,7 +51,7 @@ http_interactions:
       - strict-origin-when-cross-origin
     body:
       encoding: UTF-8
-      string: '{"page_count":1,"page_number":1,"page_size":30,"total_records":1,"users":[{"id":"lmblGIz9S9WpaJNnEwIh7g","first_name":"api","last_name":"test","email":"develop+test@itdaa.net","type":1,"pmi":3186349069,"timezone":"Asia/Seoul","verified":1,"created_at":"2020-02-17T15:06:29Z","last_login_time":"2020-04-14T08:24:24Z","language":"ko-KO","phone_number":"","status":"active"}]}'
+      string: ''
     http_version: null
-  recorded_at: Thu, 16 Apr 2020 10:39:11 GMT
+  recorded_at: Tue, 02 Jun 2020 10:36:15 GMT
 recorded_with: VCR 5.1.0

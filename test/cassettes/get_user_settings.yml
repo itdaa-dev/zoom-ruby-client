@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.zoom.us/v2/users/develop+test@itdaa.net/settings
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Zoom Ruby Client Gem 0.4.0
+      authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKRmNUYWF3UVEyV2FGRlQwT1ZYM0dRIiwiZXhwIjoxNTkxMTY0NjM0fQ.6cSZXNwkzwtBRKxoZC5VVraYFvJHvel19aUprxeJkBM
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      date:
+      - Wed, 03 Jun 2020 02:10:35 GMT
+      content-type:
+      - application/json;charset=UTF-8
+      content-length:
+      - '1897'
+      connection:
+      - close
+      server:
+      - ZOOM
+      x-zm-trackingid:
+      - WEB_b288b12e04b0bdc77d9a63c860d06662
+      x-content-type-options:
+      - nosniff
+      cache-control:
+      - no-cache, no-store, must-revalidate, no-transform
+      pragma:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      set-cookie:
+      - zm_aid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/;
+        Secure; HttpOnly, zm_haid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10
+        GMT; Path=/; Secure; HttpOnly, cred=E777C52314E53D8A84C8FB6A50C15196; Path=/;
+        Secure; HttpOnly, _zm_ctaid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970
+        00:00:10 GMT; Path=/; Secure; HttpOnly, _zm_chtaid=""; Domain=.zoom.us; Expires=Thu,
+        01-Jan-1970 00:00:10 GMT; Path=/; Secure; HttpOnly
+      x-ratelimit-category:
+      - Medium
+      strict-transport-security:
+      - max-age=31536000
+      x-xss-protection:
+      - 1; mode=block
+      referrer-policy:
+      - strict-origin-when-cross-origin
+    body:
+      encoding: UTF-8
+      string: '{"schedule_meeting":{"host_video":false,"participants_video":false,"audio_type":"both","join_before_host":false,"personal_meeting":true,"use_pmi_for_scheduled_meetings":false,"use_pmi_for_instant_meetings":false,"not_store_meeting_topic":false,"force_pmi_jbh_password":true,"require_password_for_scheduling_new_meetings":true,"require_password_for_instant_meetings":true,"require_password_for_pmi_meetings":"all","pmi_password":"","pstn_password_protected":true,"embed_password_in_join_link":true},"in_meeting":{"e2e_encryption":false,"chat":true,"private_chat":true,"auto_saving_chat":false,"entry_exit_chime":"none","record_play_voice":false,"feedback":true,"co_host":false,"polling":false,"attendee_on_hold":false,"show_meeting_control_toolbar":false,"annotation":true,"remote_control":true,"non_verbal_feedback":false,"breakout_room":false,"remote_support":false,"closed_caption":false,"group_hd":false,"virtual_background":true,"far_end_camera_control":false,"custom_data_center_regions":false,"waiting_room":true,"guest_only_to_place_in_waiting_room":false,"allow_live_streaming":false},"email_notification":{"jbh_reminder":true,"cancel_meeting_reminder":true,"alternative_host_reminder":true,"schedule_for_reminder":true},"recording":{"local_recording":true,"cloud_recording":true,"record_speaker_view":true,"record_gallery_view":false,"record_audio_file":true,"save_chat_text":true,"show_timestamp":false,"auto_recording":"none","auto_delete_cmr":false,"recording_password_requirement":{"length":8,"have_letter":true,"have_number":true,"have_special_character":true,"only_allow_numeric":false}},"telephony":{"third_party_audio":false,"audio_conference_info":"","show_international_numbers_link":true},"tsp":{},"feature":{"meeting_capacity":100,"large_meeting":false,"webinar":false,"cn_meeting":false,"in_meeting":false,"zoom_phone":false},"integration":{"linkedin_sales_navigator":false}}'
+  recorded_at: Wed, 03 Jun 2020 02:10:35 GMT
+recorded_with: VCR 6.0.0
