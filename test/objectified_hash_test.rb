@@ -12,7 +12,6 @@ class ObjectifiedHashTest < Minitest::Spec
     assert_equal @hash[:a], @oh.a
     assert_equal @hash[:b], @oh.b
     assert_equal @hash[:items].count, @oh.items.count
-    assert_equal @hash[:items][0][:a], @oh.items[0].a
   end
 
   describe "#to_hash" do
