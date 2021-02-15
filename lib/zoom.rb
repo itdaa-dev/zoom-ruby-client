@@ -12,6 +12,7 @@ require "zoom/error"
 # require "zoom/oauth"
 require "zoom/objectified_hash"
 
+require "zoom/api/billing"
 require "zoom/api/user"
 require "zoom/api/meeting"
 require "zoom/api/webinar"

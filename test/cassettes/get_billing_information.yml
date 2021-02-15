@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.zoom.us/v2/accounts/51557038/billing
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Zoom Ruby Client Gem 0.4.0
+      authorization:
+      - Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKRmNUYWF3UVEyV2FGRlQwT1ZYM0dRIiwiZXhwIjoxNjEwNjI4MzU2fQ.-Jj1ByhZ4NKXUDQuDsJP6DxeS_bLLECFAosMGEpCUcw
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 401
+      message: ''
+    headers:
+      date:
+      - Thu, 14 Jan 2021 08:45:57 GMT
+      content-type:
+      - application/json;charset=UTF-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      server:
+      - nginx
+      x-zm-trackingid:
+      - WEB_0930c3740d20597179d0bf9c3f132643
+      x-content-type-options:
+      - nosniff
+      cache-control:
+      - no-cache, no-store, must-revalidate, no-transform
+      pragma:
+      - no-cache
+      expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      set-cookie:
+      - zm_aid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/;
+        Secure; HttpOnly, zm_haid=""; Domain=.zoom.us; Expires=Thu, 01-Jan-1970 00:00:10
+        GMT; Path=/; Secure; HttpOnly, cred=D789E18FA2A4F3F28131E9F30C376419; Path=/;
+        Secure; HttpOnly, _zm_ctaid=qReSUsvzQlWuBpoMQbppWQ.1610613957581.5dac8d006aaae5b84b14caaed9c26061;
+        Domain=.zoom.us; Expires=Thu, 14-Jan-2021 10:45:57 GMT; Path=/; Secure; HttpOnly,
+        _zm_chtaid=679; Domain=.zoom.us; Expires=Thu, 14-Jan-2021 10:45:57 GMT; Path=/;
+        Secure; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"code":124,"message":"Invalid access token."}'
+  recorded_at: Thu, 14 Jan 2021 08:45:57 GMT
+recorded_with: VCR 6.0.0
