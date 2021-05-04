@@ -20,6 +20,17 @@ module Zoom # :nodoc:
         def get_webinar(webinar_id:)
           parse(JSON.parse(connection.get("webinars/#{webinar_id}").body))
         end
+
+        # list all the panelists of a Webinar.
+        # {"total_records"=>1, "panelists"=>[{"id"=>"kBEzAe", "name"=>"panel", "email"=>"panel@add_panelists.test", "join_url"=>"https://us02web.zoom.us/**"}]}
+        def get_panelists(webinar_id:)
+          parse(JSON.parse(connection.get("webinars/#{webinar_id}/panelists").body))
+        end
+
+        # add panelists to a scheduled webinar.
+        def add_panelists(webinar_id:, params:)
+          parse(JSON.parse(connection.post("webinars/#{webinar_id}/panelists", params.to_json).body))
+        end
       end
     end
   end
