@@ -74,4 +74,17 @@ class WebinarTest < Minitest::Spec
     response = Zoom::Api::Webinar.add_panelists(webinar_id: 437659431, params: params)
     assert_equal response.status, 200
   end
+
+  it "add registrant" do
+    skip
+
+    params = {
+      email: "myemail@mycompany.com",
+      first_name: "Mike",
+      last_name: "Brown"
+    }
+
+    response = Zoom::Api::Webinar.add_registrant(webinar_id: 437659431, params: params)
+    assert_equal response.status, 200
+  end
 end

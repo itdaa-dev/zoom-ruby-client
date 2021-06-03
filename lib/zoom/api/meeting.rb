@@ -20,6 +20,14 @@ module Zoom # :nodoc:
         def get_meeting(meeting_id:)
           parse(JSON.parse(connection.get("meetings/#{meeting_id}").body))
         end
+
+        # Register a participant for a meeting.
+        # params : { email: "myemail@mycompany.com", first_name: "Mike" }
+        # responses : { "registrant_id"=>"1 ","id"=>1, "topic"=>"test", "start_time"=>"2021-06-30T08:00:00Z", "join_url"=>"https://join_url"}
+        # https://marketplace.zoom.us/docs/api-reference/zoom-api/meetings/meetingregistrantcreate
+        def add_registrant(meeting_id:, params:)
+          parse(JSON.parse(connection.post("meetings/#{meeting_id}/registrants", params.to_json).body))
+        end
       end
     end
   end
