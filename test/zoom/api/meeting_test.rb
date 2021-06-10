@@ -43,4 +43,17 @@ class MeetingTest < Minitest::Spec
     response = Zoom::Api::Meeting.get_meeting(meeting_id: 437659431)
     assert_equal params[:topic], response.topic
   end
+
+  it "add registrant" do
+    skip
+
+    params = {
+      email: "myemail@mycompany.com",
+      first_name: "Mike",
+      last_name: "Brown"
+    }
+
+    response = Zoom::Api::Meeting.add_registrant(meeting_id: 92619321105, params: params)
+    assert_equal response.status, 200
+  end
 end
