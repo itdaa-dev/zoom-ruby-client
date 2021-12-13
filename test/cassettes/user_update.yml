@@ -8,7 +8,7 @@ http_interactions:
       string: '{"first_name":"api","last_name":"test","type":1}'
     headers:
       User-Agent:
-      - Zoom Ruby Client Gem 0.4.0
+      - Zoom Ruby Client Gem 0.4.1
       authorization:
       - Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKRmNUYWF3UVEyV2FGRlQwT1ZYM0dRIiwiZXhwIjoxNTg3MDQ3OTQ2fQ.cn1zr2bpcWdivbALchUjLLTGTTMtQUpDnzH5slXANV4
       Content-Type:

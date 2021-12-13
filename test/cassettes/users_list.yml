@@ -8,7 +8,7 @@ http_interactions:
       string: page=30&page_number=1&status=active
     headers:
       User-Agent:
-      - Zoom Ruby Client Gem 0.4.0
+      - Zoom Ruby Client Gem 0.4.1
       authorization:
       - Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKRmNUYWF3UVEyV2FGRlQwT1ZYM0dRIiwiZXhwIjoxNTg3MDQ3OTQ5fQ.gViBwZ-45cu6-D3ZM42YxaAnxXX4nFLwhiX31x3FOzM
       Content-Type:

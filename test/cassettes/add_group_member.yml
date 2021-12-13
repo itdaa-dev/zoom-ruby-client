@@ -8,7 +8,7 @@ http_interactions:
       string: '{"members":[{"email":"api_only+4@itdaa.net"}]}'
     headers:
       User-Agent:
-      - Zoom Ruby Client Gem 0.4.0
+      - Zoom Ruby Client Gem 0.4.1
       authorization:
       - Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJKRmNUYWF3UVEyV2FGRlQwT1ZYM0dRIiwiZXhwIjoxNTg3NjQ0NzQ3fQ.73dvTbuaYHM76OnEgm9uhAnheKDtUrBJ45NV7jKWcR0
       Content-Type:
